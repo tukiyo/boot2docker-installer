@@ -24,13 +24,13 @@ mount /dev/sda2 $PERSIST
 #-----------------------------------
 # profile
 #-----------------------------------
-cat $PERSIST/profile <<EOF
+cat > $PERSIST/profile <<EOF
 ulimit -n 65535
 EOF
 
 #-----------------------------------
 # bootlocal.sh
 #-----------------------------------
-cat $PERSIST/bootlocal.sh <<EOF
+cat > $PERSIST/bootlocal.sh <<EOF
 export TZ="JST-9"
 EOF
