@@ -4,7 +4,7 @@ dd if=/dev/sr0 of=/dev/sda bs=1M
 fdisk /dev/sda <<EOF
 n
 p
-1
+2
 
 
 
