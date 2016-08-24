@@ -13,4 +13,5 @@ p
 w
 EOF
 mkfs.ext4 -L boot2docker-data /dev/sda2
-reboot
+sh settings.sh
+#reboot
