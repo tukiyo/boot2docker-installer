@@ -1,9 +1,8 @@
-set -eu
 #-----------------------------------
 # create boot2docker-data partition
 #-----------------------------------
 dd if=/dev/sr0 of=/dev/sda bs=1M
-/usr/local/sbin/partprobe
+/usr/local/sbin/partprobe /dev/sda
 fdisk /dev/sda <<EOF
 n
 p
