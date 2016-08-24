@@ -26,7 +26,7 @@ ulimit -n 65535
 EOF
 
 cat > $B2D/bootlocal.sh <<EOF
-export TZ="JST-9"
 hostname boot2docker2
+echo JST-9 > /etc/localtime
 EOF
 chmod +x $B2D/bootlocal.sh
