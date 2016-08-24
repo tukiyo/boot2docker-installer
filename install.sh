@@ -15,8 +15,7 @@ EOF
 mkfs.ext4 -L boot2docker-data /dev/sda2
 
 ## mount
-grep sda2 /proc/partitions || sleep 5
-mount /dev/sda2 /mnt/sda2
+mount /dev/sda2 /mnt/sda2 || (sleep 5; mount /dev/sda2 /mnt/sda2)
 
 B2D=/mnt/sda2/var/lib/boot2docker
 mkdir -p $B2D
