@@ -1,3 +1,4 @@
+set -eu
 #-----------------------------------
 # create boot2docker-data partition
 #-----------------------------------
@@ -13,24 +14,4 @@ p
 w
 EOF
 mkfs.ext4 -L boot2docker-data /dev/sda2
-
-#-----------------------------------
-# mount
-#-----------------------------------
-B2D=/mnt/sda2/var/lib/boot2docker
-mkdir -p $B2D
-mount /dev/sda2 /mnt/sda2
-
-#-----------------------------------
-# profile
-#-----------------------------------
-cat > $B2D/profile <<EOF
-ulimit -n 65535
-EOF
-
-#-----------------------------------
-# bootlocal.sh
-#-----------------------------------
-cat > $B2D/bootlocal.sh <<EOF
-export TZ="JST-9"
-EOF
+reboot
