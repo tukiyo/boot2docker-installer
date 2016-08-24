@@ -17,7 +17,7 @@ mkfs.ext4 -L boot2docker-data /dev/sda2
 #-----------------------------------
 # mount
 #-----------------------------------
-PERSIST=/mnt/sda2/var/lib/boot2docker/
+PERSIST=/mnt/sda2/var/lib/boot2docker
 mkdir -p $PERSIST
 mount /dev/sda2 $PERSIST
 
