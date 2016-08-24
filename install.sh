@@ -17,20 +17,20 @@ mkfs.ext4 -L boot2docker-data /dev/sda2
 #-----------------------------------
 # mount
 #-----------------------------------
-PERSIST=/mnt/sda2/var/lib/boot2docker
-mkdir -p $PERSIST
-mount /dev/sda2 $PERSIST
+B2D=/mnt/sda2/var/lib/boot2docker
+mkdir -p $B2D
+mount /dev/sda2 /mnt/sda2
 
 #-----------------------------------
 # profile
 #-----------------------------------
-cat > $PERSIST/profile <<EOF
+cat > $B2D/profile <<EOF
 ulimit -n 65535
 EOF
 
 #-----------------------------------
 # bootlocal.sh
 #-----------------------------------
-cat > $PERSIST/bootlocal.sh <<EOF
+cat > $B2D/bootlocal.sh <<EOF
 export TZ="JST-9"
 EOF
