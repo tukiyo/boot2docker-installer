@@ -3,8 +3,12 @@ set -eu
 
 # CONFIG----------------------------------------------------------------
 #GITHUB_USER="tukiyo"
-echo -n "Input GitHub's Username: "
-read GITHUB_USER
+if [ $# -eq 1 ];then
+    GITHUB_USER=$1
+else
+    echo -n "enter GitHub's Username : "
+    read GITHUB_USER
+fi
 #
 HOSTNAME="b2d"
 #
