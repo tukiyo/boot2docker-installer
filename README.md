@@ -18,6 +18,8 @@ cd boot2docker-installer
 sh install.sh
 ```
 
+2. reboot
+
 ## ファイル
 
 |ファイル|説明|
