@@ -38,5 +38,6 @@ cat > $B2D/ssh/sshd_config <<EOF
 EOF
 
 ## data folders
-mkdir -p $B2D/home $B2D/root
+mkdir -p $B2D/home/.ssh $B2D/root/.ssh
+chmod 600 $B2D/home/.ssh $B2D/root/.ssh
 chown -R docker:staff $B2D/home
