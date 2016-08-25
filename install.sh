@@ -6,6 +6,7 @@ set -eu
 if [ $# -eq 1 ];then
     GITHUB_USER=$1
 else
+    echo "To wget https://github.com/Username.keys "
     echo -n "enter GitHub's Username : "
     read GITHUB_USER
 fi
