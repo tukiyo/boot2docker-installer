@@ -3,7 +3,7 @@ dd if=/dev/sr0 of=/dev/sda bs=1M
 /usr/local/sbin/partprobe /dev/sda
 
 ## create
-(echo n; echo p; echo 2; echo; echo; echo; echo; echo w) | fdisk /dev/sda
+(echo n; echo p; echo 2; echo; echo; echo; echo w) | fdisk /dev/sda
 mkfs.ext4 -L boot2docker-data /dev/sda2
 
 ## mount
@@ -36,3 +36,7 @@ cat > $B2D/ssh/sshd_config <<EOF
 #PasswordAuthentication no
 #PermitRootLogin no
 EOF
+
+## data folders
+mkdir -p $B2D/home $B2D/root
+chown -R docker:staff $B2D/home
