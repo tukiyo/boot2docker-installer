@@ -9,8 +9,12 @@
 
 ## インストール
 
+1. boot2docker.iso でboot
+
 ```
-vi install.sh
+git clone https://github.com/tukiyo/boot2docker-installer
+cd boot2docker-installer
+#vi install.sh
 sh install.sh
 ```
 
