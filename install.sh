@@ -26,6 +26,9 @@ mkdir -p $B2D
 
 ## startup script
 cat > $B2D/bootlocal.sh <<EOF
+#!/bin/sh
+set -x
+
 hostname $HOSTNAME
 ip addr add $IPADDR dev $ETH
 ip route add default via $GATEWAY
