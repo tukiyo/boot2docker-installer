@@ -1,5 +1,10 @@
+#!/bin/sh
+set -eu
+
 # CONFIG----------------------------------------------------------------
-GITHUB_USER="tukiyo"
+#GITHUB_USER="tukiyo"
+echo -n "Input GitHub's Username: "
+read GITHUB_USER
 #
 HOSTNAME="b2d"
 #
